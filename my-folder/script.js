@@ -36,9 +36,9 @@ async function main() {
     // Define pitch levels
     const pitchLevels = [1.0, 1.3, 1.6, 2.0]; // Normal to highest
 
-    // Event listener for Enter key press
+    // Play the audio when 'r' key is pressed
     document.addEventListener('keypress', async function(event) {
-        if (event.key === 'Enter') {
+        if (event.key === 'r') {
             // Play the audio at different pitch levels
             pitchLevels.forEach(pitch => {
                 changePitch(audioBuffer, pitch);
@@ -47,5 +47,5 @@ async function main() {
     });
 }
 
-// Call the main function
+// Call the main function when the script is loaded
 main();
