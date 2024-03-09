@@ -30,14 +30,17 @@ function loadAudioFile(url) {
 
 // Main function
 async function main() {
-    // Load the audio file from the provided link
-    const audioBuffer = await loadAudioFile('https://www.myinstants.com/media/sounds/y2mate_Ajp9shj.mp3');
+    // Load the audio file from the same directory
+    const audioBuffer = await loadAudioFile('j.mp3');
 
     // Define pitch levels
     const pitchLevels = [1.0, 1.3, 1.6, 2.0]; // Normal to highest
 
+    console.log("Script is running.");
+
     // Play the audio when 'r' key is pressed
     document.addEventListener('keypress', async function(event) {
+        console.log("Key pressed:", event.key);
         if (event.key === 'r') {
             // Play the audio at different pitch levels
             pitchLevels.forEach(pitch => {
